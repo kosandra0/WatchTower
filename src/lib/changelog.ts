@@ -10,9 +10,23 @@ export type ChangelogEntry = {
   knownIssues: string[];
 };
 
-export const APP_VERSION = "2.0.1";
+export const APP_VERSION = "2.1.0";
 
 export const CHANGELOG: ChangelogEntry[] = [
+  {
+    version: "2.1.0",
+    date: "2026-11-22",
+    label: "Complete tray menu and faster levelling",
+    features: [],
+    improvements: [
+      "Levelling is 2.25 times faster: each level now needs about 44% of the XP it needed before (Level 2 at 44 XP, Level 5 at 444 XP, Level 10 at 2,000 XP). Achievement XP values are unchanged and your earned XP is kept, so your level may jump up once after updating",
+      "The quick panel that opens from the tray icon is now built from the same page list as the sidebar, so any page added in future appears in both automatically",
+    ],
+    fixes: [
+      "The tray quick panel was missing Focus, Limits, Productivity, Projects and Reports; it now lists all 12 pages",
+    ],
+    knownIssues: ["Windows builds are not code-signed; SmartScreen may warn on first launch."],
+  },
   {
     version: "2.0.1",
     date: "2026-11-21",

@@ -94,7 +94,9 @@ const LEVEL_NAMES = [
 ];
 
 export function xpForLevel(level: number) {
-  return 50 * level * (level - 1); // L1:0 L2:100 L3:300 L4:600 L5:1000 ...
+  // v2.1.0: levels come 2.25x faster than before (the old curve was 50 * L * (L - 1)); 200/9 = 50/2.25.
+  // L1:0 L2:44 L3:133 L4:267 L5:444 L6:667 L7:933 L8:1244 L9:1600 L10:2000 ... XP awards are unchanged.
+  return Math.round(((200 / 9) * level * (level - 1)));
 }
 
 export function levelFor(xp: number) {

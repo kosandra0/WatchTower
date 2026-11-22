@@ -45,7 +45,7 @@ npm run desktop:package        # build + desktop:clean + installer + portable
 npm run desktop:dir            # faster: only release\win-unpacked
 npm test                       # package-resource and server-runtime tests (needs desktop:dir/desktop:package first)
 npm run test:packaged          # launches the packaged app end-to-end in a temporary data directory
-node scripts/verify-packaged.cjs release\WatchTower-Portable-2.0.1-x64.exe   # same checks against another exe
+node scripts/verify-packaged.cjs release\WatchTower-Portable-2.1.0-x64.exe   # same checks against another exe
 ```
 
 ### Packaging note (the v0.1.0 startup bug)

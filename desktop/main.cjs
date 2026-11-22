@@ -30,7 +30,7 @@ const MAX_LOG_BYTES = 5 * 1024 * 1024;
 const MIN_W = 960;
 const MIN_H = 640;
 const TRAY_W = 344;
-const TRAY_H = 476;
+const TRAY_H = 540;
 
 let mainWindow = null;
 let trayWindow = null;

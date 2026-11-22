@@ -1,6 +1,6 @@
 {
   "name": "watchtower",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "private": true,
   "description": "WatchTower - Windows screen time and application usage intelligence",
   "main": "desktop/main.cjs",

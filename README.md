@@ -8,6 +8,13 @@
 
 WatchTower is packaged as a Windows desktop application. Open the installed app or the portable `.exe`; the desktop host starts the local application server and the Windows monitoring agent automatically.
 
+## What's new in 2.1.0
+
+- **Complete tray menu:** the quick panel that opens from the tray icon now lists all 12 pages (Focus, Limits, Productivity, Projects and Reports were missing). It is generated from the same list as the sidebar, so new pages can't be forgotten again.
+- **Faster levelling (2.25x):** each level needs about 44% of the previous XP (Level 2 at 44 XP, Level 5 at 444, Level 10 at 2,000). Achievement XP values and earned XP are unchanged, so an existing install may jump up a few levels once.
+
+Details: [release-notes/v2.1.0.md](release-notes/v2.1.0.md).
+
 ## What's new in 2.0.0
 
 - **Focus mode** with short/long breaks, gentle eye-rest reminders and a timer that survives restarts and sleep.

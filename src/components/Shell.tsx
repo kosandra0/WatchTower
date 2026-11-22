@@ -15,7 +15,8 @@ import { CommandPalette } from "./CommandPalette";
 import { Logo3D } from "./Logo3D";
 import { TitleBar } from "./TitleBar";
 
-const ICONS = {
+/** Icon per NAV entry; also used by the tray quick panel so both menus always match. */
+export const NAV_ICONS = {
   overview: LayoutDashboard,
   statistics: BarChart3,
   applications: AppWindow,
@@ -29,6 +30,7 @@ const ICONS = {
   achievements: Trophy,
   settings: Settings,
 } as const;
+const ICONS = NAV_ICONS;
 
 /** Brand mark (live 3D watchtower). */
 export function Logo({ size = 30 }: { size?: number }) {

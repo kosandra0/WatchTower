@@ -1,21 +1,15 @@
 "use client";
 
-import { AppWindow, BarChart3, History, LayoutDashboard, List, Pause, Play, Power, Settings, Trophy } from "lucide-react";
+import { Pause, Play, Power } from "lucide-react";
+import { NAV_ICONS } from "@/components/Shell";
 import { useLive, useLiveTotals, useSettings } from "@/components/Providers";
 import { RollingTime } from "@/components/Rolling";
 import { Logo3D } from "@/components/Logo3D";
 import { useDesktop } from "@/lib/desktop";
-import { APP_NAME } from "@/lib/settings-shared";
+import { APP_NAME, NAV } from "@/lib/settings-shared";
 
-const LINKS = [
-  { href: "/", label: "Overview", icon: LayoutDashboard },
-  { href: "/statistics", label: "Statistics", icon: BarChart3 },
-  { href: "/applications", label: "Applications", icon: AppWindow },
-  { href: "/sessions", label: "Sessions", icon: List },
-  { href: "/timeline", label: "Timeline", icon: History },
-  { href: "/achievements", label: "Achievements", icon: Trophy },
-  { href: "/settings", label: "Settings", icon: Settings },
-];
+// The tray menu is generated from the same NAV list as the sidebar, so new pages can never be missing here.
+const LINKS = NAV.map((n) => ({ href: n.href, label: n.label, icon: NAV_ICONS[n.icon] }));
 
 /** Small rounded quick panel shown from the system tray icon. */
 export default function TrayPanel() {
